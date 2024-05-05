@@ -14,6 +14,7 @@ import (
 )
 
 func main() {
+	//test by jake
 	client := liteclient.NewConnectionPool()
 
 	// connect to testnet lite server
