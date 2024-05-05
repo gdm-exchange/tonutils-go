@@ -448,7 +448,7 @@ func (w *Wallet) waitConfirmation(ctx context.Context, block *ton.BlockIDExt, ac
 	if _, hasDeadline := ctx.Deadline(); !hasDeadline {
 		// fallback timeout to not stuck forever with background context
 		var cancel context.CancelFunc
-		ctx, cancel = context.WithTimeout(context.Background(), 180*time.Second)
+		ctx, cancel = context.WithTimeout(context.Background(), 600*time.Second)
 		defer cancel()
 	}
 	till, _ := ctx.Deadline()
